@@ -19,7 +19,7 @@ reads in order. It does not trust a saved `accepted` flag. The transcript includ
 the actual receipt and the canonical block anchors; block transaction lists are
 omitted because the policy does not use them. Replay checks historical observations,
 not today's chain, and cannot authenticate the provider or the file's provenance.
-Input files are bounded to 90 KB and must resolve inside the current workspace.
+Input files are bounded to 90 KB and must use visible relative paths inside the current workspace; symlinks and nonregular files are refused.
 
 For current read-only evidence:
 
@@ -99,3 +99,19 @@ The recipient is not proven to belong to a person, and the same transaction can
 be checked repeatedly: a payment service must deduplicate it and store its own
 invoice policy. A consistently dishonest provider or edited offline transcript
 can defeat the evidence checks. Recheck live when current settlement matters.
+
+## Round 25 file boundary repair
+
+The replay reader now opens each relative path component with descriptor-relative
+`O_NOFOLLOW` flags and checks the opened leaf is a regular file. It refuses
+absolute, parent, hidden, empty-component and backslash paths; FIFOs cannot block
+the read. Actual bytes, rather than a pre-open size, enforce the 90 KB bound.
+Duplicate keys, nonfinite JSON and excessive nesting fail closed. POSIX no-follow
+opens are required; unsupported platforms refuse the operation. The diagnostic
+tool now passes a workspace-relative path to this reader. Ordinary documented
+replay commands continue to work. Seven new file-boundary tests (including a
+directory replacement race) are in provider-agreement's test suite.
+
+An already-open regular file can still be edited in place by another writer;
+hardlinked input provenance is not checked. Safe opening does not authenticate
+a transcript. Policy and transfer accounting are unchanged.

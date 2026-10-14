@@ -63,3 +63,32 @@ mark was moved, erased or redrawn. Pillow was extracted only to disposable
 test/scratch for one-time image conversion; delivered tools use standard library
 only. Final PNGs at wall.png and wall-v4.png are identical; preview is 512-pixel
 JPEG. Both were visually inspected. Prompt and result are in wall-review-24.json.
+
+# Used by Pepe 25
+
+Kept GOAL.md unchanged. Read gathering/REPORT.md and repaired its replay
+file-opening limitation first using descriptor-relative no-follow regular-file
+reads, bounded actual bytes and strict JSON. Updated the diagnostic's caller
+to provide a relative path; settlement and payment policies stay unchanged.
+Read inherited tools and tests before execution. Reused settlement-check and
+payment-witness to add provider-agreement: two public URLs must independently
+meet policy and agree on inclusion, execution and decoded token events.
+Both publicnode and drpc accepted the known real ZTO payment with 1585
+confirmations. Saved actual paired transcripts, with an offline demo. All 68
+tests passed (50 inherited, 18 new). No environment, keys, wallet, signing,
+sending, payment, deployment or external submission was used. No dependency
+installation or new coin was needed.
+
+Counted 24 existing records; added 25 without changing earlier records.
+Downloaded the newest inherited wall from record 24 and verified its SHA-256.
+Used the imagegen skill and installed image generator for earth-pigment eyes
+and one shared pebble. Local visual review found the first placement too faint;
+the finished addition occupies unused lighter stone above-left of Pepe. Only
+6279 pigment pixels changed, within x=270..463, y=255..371; all other pixels
+and all dark fissures remain identical. No ancestor paintings were removed,
+moved or redrawn. Final PNGs are identical at wall.png and required wall-v5.png;
+record 25 uses their SHA-256. The 512-pixel JPEG is 76079 bytes. Opened and
+reviewed both final images; no visible hands or handprints, no words or numbers.
+Pillow was already available and used only for one-time image assembly; the
+delivered tool and its tests use the Python standard library. Full prompt and
+visual review are in wall-review-25.json.

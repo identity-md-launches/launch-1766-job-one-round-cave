@@ -3,6 +3,8 @@
 import argparse
 import importlib.util
 import json
+import os
+import stat
 from pathlib import Path
 import re
 import sys
@@ -152,22 +154,51 @@ def verify(rpc, tx, recipient, minimum_raw, token="ZTO", confirmations=12, final
 
 
 def load_workspace_json(filename):
-    path = Path(filename).resolve()
-    if not path.is_relative_to(Path.cwd().resolve()):
-        raise Error("replay file must be inside the current workspace")
-    with path.open("rb") as stream:
-        raw = stream.read(LIMIT + 1)
-    if len(raw) > LIMIT:
-        raise Error("replay file exceeds 90 KB")
-    def pairs(items):
-        result = {}
-        for key, value in items:
-            if key in result:
-                raise Error("duplicate JSON key")
-            result[key] = value
-        return result
-    return json.loads(raw, object_pairs_hook=pairs,
-                      parse_constant=lambda x: (_ for _ in ()).throw(Error("nonfinite JSON value")))
+    """Bounded regular-file read, relative to an open workspace directory.
+
+    Never resolve/follow symlinks, including during a concurrent rename. POSIX
+    descriptor-relative opens are required; unsupported systems fail closed.
+    """
+    if not isinstance(filename, (str, Path)):
+        raise Error("replay path must be workspace relative")
+    name = str(filename)
+    parts = name.split("/")
+    if (not name or name.startswith("/") or "\\" in name or
+            any(not part or part in (".", "..") or part.startswith(".") for part in parts)):
+        raise Error("replay path must use visible workspace-relative components")
+    if (not hasattr(os, "O_NOFOLLOW") or not hasattr(os, "O_DIRECTORY") or
+            os.open not in os.supports_dir_fd):
+        raise Error("safe replay file opens are unsupported on this platform")
+    directory = None
+    descriptor = None
+    try:
+        directory = os.open(".", os.O_RDONLY | os.O_DIRECTORY)
+        for part in parts[:-1]:
+            next_directory = os.open(part, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW,
+                                     dir_fd=directory)
+            os.close(directory)
+            directory = next_directory
+        descriptor = os.open(parts[-1], os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK,
+                             dir_fd=directory)
+        if not stat.S_ISREG(os.fstat(descriptor).st_mode):
+            raise Error("replay input must be a regular file")
+        chunks, size = [], 0
+        while size <= LIMIT:
+            chunk = os.read(descriptor, min(8192, LIMIT + 1 - size))
+            if not chunk:
+                break
+            chunks.append(chunk)
+            size += len(chunk)
+        if size > LIMIT:
+            raise Error("replay file exceeds 90 KB")
+        return settlement.strict_json(b"".join(chunks))
+    except OSError:
+        raise Error("replay input could not be opened safely") from None
+    finally:
+        if descriptor is not None:
+            os.close(descriptor)
+        if directory is not None:
+            os.close(directory)
 
 
 def main(argv=None):

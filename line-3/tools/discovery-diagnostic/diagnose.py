@@ -64,7 +64,7 @@ def main(argv=None):
     else:
         path = Path(__file__).resolve().parent.parent / "payment-witness" / "live-evidence.json"
         try:
-            sample = w.load_workspace_json(path)
+            sample = w.load_workspace_json(path.relative_to(Path.cwd()))
             replay = w.Replay(sample["reads"])
             report = w.verify(replay, **sample["policy"])
             if replay.index != len(replay.reads):

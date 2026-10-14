@@ -1,0 +1,53 @@
+{
+  "number": 25,
+  "meaning": "Pepe asks two witnesses to agree on the same payment stone.",
+  "ancestorSha256": "f6ff96fad89b70d77eeaadf5c508f0516ed7148c9c85853a15577c8e4a995864",
+  "wallSha256": "d6ac5de4a2eed23d706047265176691aac69689841cba8cce4f328b3c7a4c1df",
+  "outputs": [
+    {
+      "path": "artifacts/line-3/wall.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "format": "PNG",
+      "mode": "RGB"
+    },
+    {
+      "path": "artifacts/line-3/wall-v5.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "format": "PNG",
+      "mode": "RGB"
+    },
+    {
+      "path": "dist/line-3/25.jpg",
+      "dimensions": [
+        512,
+        512
+      ],
+      "format": "JPEG",
+      "mode": "RGB"
+    }
+  ],
+  "changedPixels": 6279,
+  "changedPixelBounds": [
+    270,
+    255,
+    464,
+    372
+  ],
+  "preservation": "Only added pigment changes pixels in the stated unused upper-left rectangle. All other pixels and dark fissures remain exact; ancestor paintings do not intersect this rectangle.",
+  "imageTool": "mcp__image__generate_image, installed imagegen workflow",
+  "prompt": "Sparse isolated prehistoric pigment drawing on pure white: TWO watcher-eye pictograms side by side above ONE small shared round irregular pebble. Each watcher is a simple heavy charcoal upper eyelid, one ochre iris and a rough ochre lower curve. Exactly two eyes total, both watching one pebble below. Earth pigments only: charcoal black, red ochre, yellow ochre. Thick uneven burnt-stick marks and worn thumb smears, flat handmade Lascaux cave art, gaps and granular texture. Centered with generous white margins. No faces, no hands, no handprints, no letters, no numerals, no text, no signatures, no symbols, no borders, no shadows, no 3D rendering.",
+  "reviewStep": "Open and visually inspect final full PNG and JPEG before delivery",
+  "visualReviewStatus": "Final full PNG and 512-pixel JPEG opened and inspected locally",
+  "unmetVisualRequirements": [],
+  "visibleHands": 0,
+  "visibleHandprints": 0,
+  "digitReview": "No visible hands or handprints: inherited Pepe hands stay hidden; no new hands were added.",
+  "visualObservations": "Recognizable wide-mouthed heavy-lidded Pepe retained. New two-eye/shared-pebble pigment on unused stone. Warm rough rock, cracks, torchlight, size and framing retained. No letters, numbers, captions, signatures, logos, watermarks, borders, real people or prohibited symbols observed.",
+  "reviewLimit": "Local visual review, not independent certification."
+}

@@ -1,0 +1,30 @@
+{
+  "name": "The Paired Witnesses",
+  "image": "https://api.imd.fun/artifacts/d6ac5de4a2eed23d706047265176691aac69689841cba8cce4f328b3c7a4c1df",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 3"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "provider-agreement"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe asks two witnesses to agree on the same payment stone."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "verify Ethereum transaction settlement"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "offlineTests": [
+    {
+      "suite": "settlement-check",
+      "passed": 16
+    },
+    {
+      "suite": "payment-witness",
+      "passed": 14
+    },
+    {
+      "suite": "rpc-boundary",
+      "passed": 12
+    },
+    {
+      "suite": "discovery-diagnostic",
+      "passed": 8
+    },
+    {
+      "suite": "provider-agreement",
+      "passed": 18
+    }
+  ],
+  "totalPassed": 68,
+  "demo": {
+    "command": "python3 -B line-3/tools/provider-agreement/agreement.py --demo",
+    "exitCode": 0,
+    "state": "corroborated"
+  },
+  "live": {
+    "sources": [
+      "https://ethereum-rpc.publicnode.com",
+      "https://eth.drpc.org"
+    ],
+    "accepted": true,
+    "state": "corroborated",
+    "confirmationsEach": 1585,
+    "evidence": "tools/provider-agreement/live-check.json"
+  },
+  "delivery": {
+    "goalUnchanged": true,
+    "olderRecordsUnchanged": 24,
+    "outputBytesDimensionsAndRecord": "passed",
+    "modifiedFileScopeAndSize": "passed",
+    "namedPngOutputsUntracked": true
+  },
+  "limits": "Local checks only; provider agreement is not consensus proof or transcript authentication."
+}

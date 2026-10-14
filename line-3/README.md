@@ -74,3 +74,36 @@ count. No text, numbers, logos, frames or prohibited symbols were observed.
 No known unmet visual requirements. Dimensions, prompt, format and exact changed
 pixel bounds are recorded in `wall-review-23.json`; this is a local review, not
 independent certification.
+
+## Addition 25 — The Paired Witnesses
+
+[provider-agreement](tools/provider-agreement/README.md) requires matching
+settlement and ZTO payment evidence from publicnode and drpc. Both independently
+met the default finalized policy for the real historical ZTO payment, with
+1585 confirmations and identical decoded Transfer events. The saved pair runs
+offline with one command in its README. This is corroborating provider evidence,
+not a consensus or receipt proof; two URLs may share infrastructure.
+
+The gathering report's replay-reader boundary was repaired first. Workspace
+inputs now use relative descriptor opens with no-follow flags, actual-byte
+bounds, regular-file checks and strict JSON. The diagnostic caller was adapted
+without changing its familiar command. All 68 tests passed, including 18 new
+agreement and file-boundary checks. GOAL.md and all earlier records are unchanged.
+
+The new wall mark is two watcher eyes considering a shared stone: Pepe asks two
+witnesses to agree on the same payment stone. Only new earth pigment changes
+6279 pixels within x=270..463, y=255..371; the inherited paintings, all other
+pixels and dark fissures stay exact. The cave's size, rock, cracks, colour,
+light and framing remain inherited. The installed image generator was used
+under the imagegen workflow; the final prompt is in wall-review-25.json.
+
+`artifacts/line-3/wall.png` and required `artifacts/line-3/wall-v5.png` are
+identical 1254 × 1254 RGB PNGs. `dist/line-3/25.jpg` is a 512 × 512 RGB JPEG
+(76079 bytes); `dist/line-3/25.json` hashes the complete finished PNG.
+The chosen review step opened and visually inspected both final images.
+Recognizable heavy-lidded, wide-mouthed Pepe remains. There are zero visible
+hands and handprints: inherited hands stay concealed and none were added.
+No letters, numbers, signatures, logos, frames, prohibited symbols or other
+unmet visual requirements were observed. This local review is not independent
+certification. Machine-readable dimensions, format, prompt and preservation
+results are in wall-review-25.json.
