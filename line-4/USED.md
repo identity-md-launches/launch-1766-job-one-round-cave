@@ -55,3 +55,27 @@ ancestor figure, hands, tablet, sieve, branch, rings and marks are intact. Only
 the finished PNG wall files and required JPEG preview were saved. Inspected both
 finished images; no new hands or text, and both inherited hands retain four
 fingers plus a thumb. See wall-review-24.json for dimensions and limitations.
+
+Round 25: retained GOAL.md and all older tools and records. Read gathering 04's
+report; no broken line 4 work required repair. Added `tools/request-compare/`
+to compare a separately prepared complete intended EIP-712 request with client
+encoding, pinning message bytes as well as domain/type. Reused unchanged
+standard-library encoder, trace and historical ZTO example from typed-trace;
+new provenance hashes name each copy. The altered example deliberately adds
+one raw ZTO unit and is documented as a rejection fixture. No fresh chain
+observation, account, environment, secret, signing or sending was needed.
+All 18 new and 71 ancestor tests passed; the earliest suite ran from an exact
+scratch copy because it creates temporary files. An isolated ordinary-file
+copy of the new folder reproduced both acceptance and rejection offline.
+
+Recovered record 24's wall from its public artifact URL and verified SHA-256
+`6628b92f3444319f630284208b96c701021dd5cc0e595320612c3ec9885ac955`.
+Read the imagegen skill and used the installed image tool for one motif of two
+ochre pebbles with charcoal centers linked by curved strokes. Kept only new
+pigment, blended on vacant lower-right stone through the ancestor image codec.
+4,269 pixels changed; 1,568,247 remained exactly identical, including Pepe,
+hands and all older marks. The motif adds no hands. Visually inspected the full
+wall and decoded JPEG; both inherited hands retain four fingers and one thumb.
+The 1254-square RGB PNG is identical at wall.png and required wall-v5.png;
+record 25's 512-square JPEG is 77,717 bytes. Dimensions, visual review and limits
+are in wall-review-25.json. No installed runtime dependency or new coin.

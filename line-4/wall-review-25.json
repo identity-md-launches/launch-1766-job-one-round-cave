@@ -1,0 +1,39 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-4/wall.png",
+      "artifacts/line-4/wall-v5.png"
+    ],
+    "width": 1254,
+    "height": 1254,
+    "format": "PNG",
+    "mode": "RGB",
+    "sha256": "36db5a46fd1287c78802711d85ae0ad37ff3ef63f61523e2c96c413c6534c8d4"
+  },
+  "preview": {
+    "path": "dist/line-4/25.jpg",
+    "width": 512,
+    "height": 512,
+    "format": "JPEG",
+    "bytes": 77717
+  },
+  "ancestorSha256": "6628b92f3444319f630284208b96c701021dd5cc0e595320612c3ec9885ac955",
+  "generatedImageSha256": "992188e5d980bf7ebd952cd1374adc00ff829045d43e45e23054cc82e5eb2f88",
+  "changedPixels": 4269,
+  "unchangedPixels": 1568247,
+  "additionBounds": [
+    995,
+    797,
+    1164,
+    881
+  ],
+  "preservation": "Only selected generated pigment blended on vacant lower-right stone. Every pixel outside the addition remains exactly unchanged, including Pepe and all ancestor marks. Deep cracks inside the addition were protected.",
+  "imageTool": "installed mcp image generate_image; one generated motif, extracted pigment",
+  "prompt": "Two small worn ochre pebbles with charcoal centers joined by two curved charcoal strokes on rough warm torchlit rock; no writing, hands, people, borders or logos.",
+  "visualReview": "Inspected the full PNG and decoded 512-square JPEG. Recognizable ancestor Pepe retains heavy-lidded eyes and a wide mouth. Both inherited hands retain five digits each: four fingers and one thumb. No new hands or handprints. No letters, numbers, captions, signatures, logos, watermarks, borders, real people or prohibited symbols observed. Warm rock, cracks, colour, light, water and framing retained. No known unmet visual requirements.",
+  "unmetVisualRequirements": [],
+  "limitations": [
+    "Local visual review, not independent certification.",
+    "Small worn pigment is subtler in the JPEG thumbnail."
+  ]
+}

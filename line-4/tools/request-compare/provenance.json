@@ -1,0 +1,20 @@
+{
+  "unchangedCopies": [
+    {
+      "source": "line-4/tools/typed-trace/typed_digest.py",
+      "sha256": "a6903cd67fd837f18be3546721830228646df5e144c04f7a5cbd40c5f21854d9",
+      "copy": "line-4/tools/request-compare/typed_digest.py"
+    },
+    {
+      "source": "line-4/tools/typed-trace/typed_trace.py",
+      "sha256": "5c31aee1c6c845e2624448938a586016dd6304f768b1f793852919ec907ca78d",
+      "copy": "line-4/tools/request-compare/typed_trace.py"
+    },
+    {
+      "source": "line-4/tools/typed-trace/zto-payment.json",
+      "sha256": "2cf66267a37b24255fc5a7d2a24489ac5261cb247d4f18e2ef87f0e542d1ef54",
+      "copy": "line-4/tools/request-compare/zto-intended.json"
+    }
+  ],
+  "alteredExample": "Deliberately incremented minimumRaw by one for rejection demonstration; not chain evidence."
+}

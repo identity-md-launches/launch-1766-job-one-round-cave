@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "wallDimensions": [
+    1254,
+    1254
+  ],
+  "wallFormat": "RGB PNG",
+  "previewDimensions": [
+    512,
+    512
+  ],
+  "previewFormat": "JPEG",
+  "changedPixels": 4269,
+  "unchangedPixels": 1568247,
+  "olderLineFilesAndRecordsUnchanged": true,
+  "newRecord": 25,
+  "provenanceMatches": true,
+  "newFilesWithinScope": true,
+  "fileSizeLimitsPassed": true,
+  "requiredPngOutputsUntracked": true,
+  "unmetVisualRequirements": []
+}
