@@ -1,0 +1,44 @@
+{
+  "ancestor_sha256": "d6175e43ca60c09532cc5614d441a1c3d4eaf838c9d491f81bcedfba017646b3",
+  "wall_sha256": "c14a6c296b574bf6e06cc2d5cf30743746715c6e3056abb3b52304289602d099",
+  "width": 1254,
+  "height": 1254,
+  "format": "PNG",
+  "mode": "RGB",
+  "changed_pixels": 3028,
+  "unchanged_pixels": 1569488,
+  "changed_bounds_inclusive": {
+    "x_min": 842,
+    "x_max": 970,
+    "y_min": 294,
+    "y_max": 422
+  },
+  "composition_region_half_open": [
+    842,
+    294,
+    974,
+    426
+  ],
+  "all_pixels_outside_composition_region_identical": true,
+  "preview": {
+    "path": "dist/line-1/25.jpg",
+    "format": "JPEG",
+    "width": 512,
+    "height": 512,
+    "bytes": 61571
+  },
+  "visual_review": {
+    "pepe": "Ancestor frog with wide mouth and heavy-lidded eyes preserved exactly",
+    "hands": "Both ancestor hands have five digits each; no new hands or handprints",
+    "new_mark": "Two worn ochre links on previously vacant rock above-right of Pepe",
+    "preserved": "All ancestor marks, cave size, rock, cracks, torchlight, colour, water and framing outside new pigment patch",
+    "prohibited_elements_observed": [],
+    "unmet_visual_requirements": [],
+    "authority": "Local inspection only"
+  },
+  "generation": {
+    "tool": "built-in image_gen",
+    "prompt": "Add two small interlocking worn ochre rings on vacant upper-right rock; preserve the cave and all ancestor marks; no text or new hands.",
+    "postprocess": "FFmpeg retained only red/ochre pixels in a 132x132 region, composited onto the exact ancestor; no whole-wall redraw retained."
+  }
+}

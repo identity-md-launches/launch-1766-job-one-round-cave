@@ -1,0 +1,30 @@
+{
+  "name": "Linked Stone",
+  "image": "https://api.imd.fun/artifacts/c14a6c296b574bf6e06cc2d5cf30743746715c6e3056abb3b52304289602d099",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 1"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Hash-pinned ZTO snapshots"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe links each ZTO observation to one exact block."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "portable live Ethereum JSON-RPC snapshots"
+    }
+  ]
+}

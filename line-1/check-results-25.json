@@ -1,0 +1,53 @@
+{
+  "commands": [
+    {
+      "command": "python3 -B line-1/tools/hash-pinned-zto/test_pinned.py",
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_bad_supply_and_decimals (__main__.PinnedTests.test_bad_supply_and_decimals) ... ok\ntest_both_checksum_layers (__main__.PinnedTests.test_both_checksum_layers) ... ok\ntest_capture_requests_exact_hash (__main__.PinnedTests.test_capture_requests_exact_hash) ... ok\ntest_changed_rechecked_hash (__main__.PinnedTests.test_changed_rechecked_hash) ... ok\ntest_error_envelope_and_bool_id (__main__.PinnedTests.test_error_envelope_and_bool_id) ... ok\ntest_file_and_cli_integration (__main__.PinnedTests.test_file_and_cli_integration) ... ok\ntest_invalid_hash_and_block_quantity (__main__.PinnedTests.test_invalid_hash_and_block_quantity) ... ok\ntest_invalid_timeout (__main__.PinnedTests.test_invalid_timeout) ... ok\ntest_mixed_hash_and_number_refused (__main__.PinnedTests.test_mixed_hash_and_number_refused) ... ok\ntest_no_latest_downgrade (__main__.PinnedTests.test_no_latest_downgrade) ... ok\ntest_no_number_downgrade (__main__.PinnedTests.test_no_number_downgrade) ... ok\ntest_non_finalized_anchor (__main__.PinnedTests.test_non_finalized_anchor) ... ok\ntest_parser_rejects_duplicate_keys_and_nonfinite (__main__.PinnedTests.test_parser_rejects_duplicate_keys_and_nonfinite) ... ok\ntest_read_order_and_missing_read (__main__.PinnedTests.test_read_order_and_missing_read) ... ok\ntest_real_offline_replay (__main__.PinnedTests.test_real_offline_replay) ... ok\ntest_require_canonical_exact_boolean (__main__.PinnedTests.test_require_canonical_exact_boolean) ... ok\ntest_require_canonical_mandatory (__main__.PinnedTests.test_require_canonical_mandatory) ... ok\ntest_rpc_failure_never_downgrades (__main__.PinnedTests.test_rpc_failure_never_downgrades) ... ok\ntest_send_sign_and_other_methods_refused (__main__.PinnedTests.test_send_sign_and_other_methods_refused) ... ok\ntest_transport_bounds_and_headers (__main__.PinnedTests.test_transport_bounds_and_headers) ... ok\ntest_uint8_precision_rendering_without_float (__main__.PinnedTests.test_uint8_precision_rendering_without_float) ... ok\ntest_unknown_fields_source_and_timestamp (__main__.PinnedTests.test_unknown_fields_source_and_timestamp) ... ok\ntest_wrong_chain (__main__.PinnedTests.test_wrong_chain) ... ok\ntest_wrong_real_hash_rejected_even_resealed (__main__.PinnedTests.test_wrong_real_hash_rejected_even_resealed) ... ok\ntest_wrong_recheck_height (__main__.PinnedTests.test_wrong_recheck_height) ... ok\ntest_wrong_selector_and_call_fields (__main__.PinnedTests.test_wrong_selector_and_call_fields) ... ok\ntest_wrong_token_rejected (__main__.PinnedTests.test_wrong_token_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 27 tests in 0.136s\n\nOK\n"
+    },
+    {
+      "command": "python3 -B line-1/tools/hash-pinned-zto/pinned.py --verify line-1/tools/hash-pinned-zto/live-zto.json",
+      "exit_code": 0,
+      "stdout": "{\n  \"block_hash\": \"0x6eb178a92a831e6a987e54bf21e8f5d42ce62642fb3b9da54b09c7960b18f814\",\n  \"block_number\": 26192324,\n  \"chain_id\": 1,\n  \"decimals\": 18,\n  \"evidence\": \"RPC provider observations, not a state proof\",\n  \"state_selector\": {\n    \"blockHash\": \"0x6eb178a92a831e6a987e54bf21e8f5d42ce62642fb3b9da54b09c7960b18f814\",\n    \"requireCanonical\": true\n  },\n  \"total_supply_raw\": \"1000000000000000000000000000\",\n  \"total_supply_tokens\": \"1000000000.000000000000000000\",\n  \"zto_address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "previous_checks": {
+    "safe_files_tests": 19,
+    "result": "passed before final delivery inspection",
+    "command": "python3 -B line-1/tools/safe-snapshot-files/test_safe_files.py"
+  },
+  "delivery": {
+    "result": "passed",
+    "wall": {
+      "path": "artifacts/line-1/wall-v5.png",
+      "format": "PNG",
+      "width": 1254,
+      "height": 1254,
+      "mode": "RGB",
+      "bytes": 3991963,
+      "sha256": "c14a6c296b574bf6e06cc2d5cf30743746715c6e3056abb3b52304289602d099",
+      "all_png_crcs_valid": true,
+      "decoding_valid": true,
+      "wall_png_alias_identical": true,
+      "untracked": true
+    },
+    "preview": {
+      "path": "dist/line-1/25.jpg",
+      "format": "JPEG",
+      "width": 512,
+      "height": 512,
+      "bytes": 61571,
+      "decoding_valid": true
+    },
+    "record": "dist/line-1/25.json",
+    "record_shape_valid": true,
+    "older_records_unchanged": true,
+    "goal_byte_identical": true,
+    "paths_within_scope": true,
+    "new_nonartifact_files_below_100kb": true,
+    "unmet_visual_requirements": [],
+    "authority": "Self-check, not independent certification"
+  }
+}
