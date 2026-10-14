@@ -23,3 +23,10 @@ Gathering 04 adds payment domain binding: see `payment-evidence/bind.py` and its
 README for a single offline decision requiring payment policy, exact client
 encoding, and independently supplied domain/type to all match. No signing or
 new coin is needed.
+
+Gathering 05 adds `payment-evidence/corroborate.py`: two provider transcripts
+must independently meet the payment policy and agree, then their complete
+content commitment must match the separately reviewed intended request and
+exact client encoding. It shares the current agreement and request comparison
+pieces, with 16 integration tests and a detached offline trial. ZTO supplies the
+real evidence; no additional coin, package or wallet is required.

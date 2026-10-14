@@ -1,10 +1,30 @@
 {
-  "name": "Not painted yet",
-  "image": "https://api.imd.fun/artifacts/ce5dbc18003365f5a1bf9014a2a357c2cb5c5dc2335dd0eb9b661ae703d36308",
+  "name": "Two Witnesses, One Stone",
+  "image": "https://api.imd.fun/artifacts/17bfac691c7494b63d1e91040056a58299cf219a19d28d243249932b71579e46",
   "attributes": [
     {
       "trait_type": "Cave",
       "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Gathering"
+    },
+    {
+      "trait_type": "Number",
+      "value": 5
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "Corroborated payment request comparison"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Two ochre eyes join their observations before trusting the same payment."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "Gathering"
     }
   ]
 }

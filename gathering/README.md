@@ -1,67 +1,63 @@
-# Water, gathering 04
+# Water gathering 05
 
-This round checks four public-evidence worker tools, shares domain binding with
-the payment bridge, rebuilds the cave gallery, and leaves **The Bound Eye**.
-No line folder, wallet, key, signing flow or external submission is changed.
+This round checks all four lines, shares corroborated payment request comparison,
+rebuilds the gallery and leaves **Two Witnesses, One Stone**. No line folder or
+line record changed. Everything needed for offline use is ordinary Python/JSON
+in the repository; Python's standard library is sufficient (POSIX file readers).
 
-One offline command verifies the four lines and shared pieces:
+Run every line's documented offline checks and the shared integration checks:
 
 ```sh
 python3 -B gathering/run_checks.py
 ```
 
-It runs each documented check and offline demonstration, including the four
-mark-24 additions. Tests which write beside an ancestor source run on an exact
-copy in `test/scratch/`. All bytecode generation is disabled. The final run
-passed 221 tests and all 32 commands; `check-results.json` retains the results.
-Checks are local observations, not independent certification.
+The final run passed **43 commands and 312 tests**; `check-results.json` retains
+the output. Tests that write beside source run on a copy in `test/scratch/`.
+The new shared command and its limitations are documented in
+`../shared/payment-evidence/README.md`. It requires two agreeing payment
+observations, independent policy, complete intended request and exact client
+encoding to pass together. It never signs or sends anything.
 
-The useful new shared command is documented in
-`../shared/payment-evidence/README.md`: `bind.py` requires a replayed ZTO/IMD
-payment, exact client commitment and separately supplied domain/type to agree.
-The detached copy trial is recorded in `portable-check-04.json`. Fresh public
-Ethereum trials are in `live-check-results-04.json`, `anchored-round04.json`
-and the bridge's `round04.*.json`. Those transcripts retain historical provider
-observations; the demo policy was derived from the receipt, not an invoice.
-`live_checks.py` uses the public endpoint normally; this runtime routed its reads
-through the assignment's supplied transport without persisting its address.
+`REPORT.md` replaces the prior report with per-line trials, working behavior,
+limits, goal scope and shared changes. `COINS.md` says none because ZTO already
+provides usable real payment evidence, with IMD supported second. Fresh publicnode
+hash-pinned ZTO capture, two-provider payment verification and discovery passed;
+see `live-check-results-05.json` and `hash-pinned-round05.json`. Saved observations
+are historical and unauthenticated, not current consensus proofs or invoices.
+`live_checks_05.py` can make the public read trials again; offline checks never
+require network. No package, wallet, secret or environment configuration is used.
 
-`REPORT.md` replaces the previous report and lists per-line trials, working
-behavior, unresolved limits, shared changes and scope. `COINS.md` says none:
-ZTO already supplies practical payment evidence and IMD is supported second.
+The finished wall is **1254 × 1254 RGB PNG** at required
+`artifacts/gathering/wall-v5.png` and `artifacts/gathering/wall.png`; both files
+are identical. `dist/gathering/05.jpg` is a **512 × 512 JPEG**, 75,379 bytes.
+`05.json` has the required six attributes and the PNG's lowercase SHA-256 URL.
+The installed image tool produced the new paired-eye pigment. One-time finishing
+added it to vacant stone below the ancestor bowl, preserving every outside pixel
+and deep cracks. `finish_wall_05.py` records that composition and refuses to run
+unless its input is the verified gathering-04 ancestor; it is not a command to
+rerun on the finished image.
 
-The whole gathering wall is **1254 × 1254 RGB PNG** at
-`artifacts/gathering/wall.png` and required `artifacts/gathering/wall-v4.png`.
-The preview is **512 × 512 JPEG**, 75,232 bytes, at `dist/gathering/04.jpg`;
-its record `04.json` uses the PNG's lowercase SHA-256 artifact URL. The installed
-image generator made one ochre-loop/charcoal-eye pigment draft. A one-time local
-composition added only that pigment to vacant stone; all outside pixels and deep
-cracks remain unchanged. `finish_wall_04.py` documents this process and refuses
-to run unless `wall.png` is the verified gathering-03 ancestor. It is a finishing
-record, not a command to regenerate the current deliverable.
+Both full wall and decoded JPEG were visually inspected: Pepe, inherited marks,
+rock, cracks, colour, light and framing remain. No hands/handprints are depicted;
+no digits to count. No forbidden text or other marks were observed. **No known
+unmet visual requirements.** `wall-review-05.json` records the full image-tool
+prompt, dimensions, formats, hashes and preservation/local review. The generated
+draft was overwritten; no extra image is delivered.
 
-Both the full PNG and decoded JPEG were inspected: ancestor Pepe, rock, light,
-cracks, water and framing remain intact. No hands/handprints are depicted, so no
-digits are present. No text, forbidden marks, borders or frames observed.
-**No known unmet visual requirements.** Counts, format and inspection notes are
-in `wall-review-04.json`.
+The gallery has **121 records**, **25 paintings** and **96 pending slots**, by
+wall with newest paintings first. It includes inline styles and all captions;
+painted thumbnails load locally, full-size and pending-cave images use public
+artifact URLs. This is the fifth gathering, so first-gathering placeholder
+creation is not triggered. Existing pending records remain unchanged.
 
-`dist/index.html` is one dependency-free page with inline styles and captions;
-all 117 inherited/current records appear by wall, newest painted mark first,
-with future slots expandable. Painted JPEGs load locally offline; full-size walls
-and unpainted cave images use public artifact URLs. Four goals are copied exactly
-from their unchanged GOAL.md files to `dist/goals.json`. This is the fourth
-painted gathering, so the first-gathering placeholder creation rule does not
-apply; existing future records remain untouched.
-
-Rebuild the page and check delivery:
+Rebuild and validate the deliverable:
 
 ```sh
 python3 -B gathering/build_gallery.py
 python3 -B gathering/check_delivery.py
 ```
 
-The latter validates image structure, record/hash/traits, previews, placeholder
-coverage, gallery order, goals, vendored provenance, unchanged line-folder hashes
-and the 100 KB file cap outside artifacts. It requires the locally delivered wall
-files. Named PNG outputs remain untracked for the daemon to upload separately.
+The latter checks formats, dimensions, records, hashes, placeholder coverage,
+goals, gallery order, vendored provenance, unchanged line folders and the 100 KB
+file cap outside artifacts. These checks carry no independent certification.
+Required PNGs remain untracked for the daemon's separate artifact upload.

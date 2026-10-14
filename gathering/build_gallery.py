@@ -94,6 +94,10 @@ Painted marks appear newest first. Future slots remain unpainted.<br>
 <a href="goals.json">Four goals</a> · <a href="https://etherscan.io/token/0xd782bdea4ef02a0bd391eb9089470c8080f0a68e">ZTO on Ethereum</a>
 <p>This page includes its styles and all record captions. Painted thumbnails load from the JPEGs beside their records and work offline. Full walls and unpainted cave images use public artifact URLs.</p>
 </footer></body></html>'''
+    # The gathering loop leaves its painted records sorted newest first.
+    cover = painted[0][1]['image'] if painted else 'https://api.imd.fun/artifacts/ce5dbc18003365f5a1bf9014a2a357c2cb5c5dc2335dd0eb9b661ae703d36308'
+    page = page.replace('<meta property="og:image" content="https://api.imd.fun/artifacts/d635c322bc05dccc59fe206ff48a2f136edfe3b7a2966656ad8fe94687cdbe9f">',
+                        '<meta property="og:image" content="' + esc(cover) + '">')
     (DIST / "index.html").write_text(page, encoding="utf-8")
     print(f"Built gallery: {painted_count} paintings, {count} records, {len(page.encode())} bytes")
 

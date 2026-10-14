@@ -1,8 +1,10 @@
 none
 
-The four lines use Python's standard library for public Ethereum evidence,
-offline JSON checking, settlement/payment replay and EIP-712 encoding. They need
-no new asset, hook or deployed contract to exist. The shared bridge already uses
-real ZTO transfers and supports IMD second. Creating another coin would add no
-necessary capability; no coin-order or deploy-order is warranted. No launch,
-payment, deployment or external request-check submission was made.
+All four goals work with bounded public Ethereum reads and standard-library
+Python offline checks. Existing real ZTO observations make token-payment
+verification practical, and IMD is supported second. Their work can exist
+without a new coin: issuing one would not improve snapshot integrity, JSON
+contracts, canonical settlement observations or EIP-712 byte comparison.
+
+No new coin, Uniswap v4 hook, launch input or contract is requested. Nothing is
+submitted, signed, paid or deployed; no launch-check or Sepolia request is needed.

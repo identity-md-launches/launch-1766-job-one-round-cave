@@ -1,0 +1,56 @@
+{
+  "ancestorSha256": "d635c322bc05dccc59fe206ff48a2f136edfe3b7a2966656ad8fe94687cdbe9f",
+  "ancestorSize": [
+    1254,
+    1254
+  ],
+  "wallSize": [
+    1254,
+    1254
+  ],
+  "wallFormat": "PNG",
+  "wallMode": "RGB",
+  "wallSha256": "17bfac691c7494b63d1e91040056a58299cf219a19d28d243249932b71579e46",
+  "generatedDraftSha256": "20da2a52e322184783d202f8131586f68c294f53c47b98b6889c4da0c5a44056",
+  "generatedDraftSize": [
+    1774,
+    887
+  ],
+  "generatedDraftRetained": false,
+  "changedPixels": 8870,
+  "unchangedPixels": 1563646,
+  "changedPixelBounds": [
+    562,
+    890,
+    751,
+    979
+  ],
+  "additionRectangle": [
+    562,
+    890,
+    190,
+    90
+  ],
+  "allPixelsOutsideAdditionUnchanged": true,
+  "deepCracksProtected": true,
+  "previewSize": [
+    512,
+    512
+  ],
+  "previewFormat": "JPEG",
+  "previewBytes": 75379,
+  "previewQuality": 52,
+  "imageTool": "mcp__image__generate_image",
+  "prompt": "Create one isolated prehistoric pigment mark for additive compositing onto an existing Lascaux-style cave wall. Pure plain chalk-white background. A pair of small uneven yellow-ochre hollow stones or loops beside each other joined by a short worn red-ochre stroke, each with one small charcoal black heavy-lidded Pepe frog eye inside. Simple burnt-stick and thumb pigment drawing, handmade ragged strokes with little worn gaps. Only earth pigments ochre yellow, ochre red and charcoal black. Centered single compact horizontal motif with generous blank white space all around. No rock background, no scenic background, no hands, no handprints, no text, no letters, no numerals, no symbols, no logos, no watermark, no border or frame. This is a pigment insert about corroborating two observations, not a whole replacement cave. The existing cave and existing Pepe will remain intact.",
+  "reviewStatus": "visually inspected full PNG and decoded JPEG",
+  "unmetVisualRequirements": [],
+  "visualReview": {
+    "ancestorPepe": "Recognizable wide mouth and heavy-lidded eyes unchanged",
+    "newMark": "Two small charcoal eyes in ochre loops linked by a red ochre stroke, below bowl",
+    "handsAndHandprints": 0,
+    "digitRequirement": "No hands or handprints depicted; no digits to count",
+    "preservation": "Rock, cracks, pigment marks, lighting, water and framing preserved outside the vacant addition region",
+    "forbiddenContentObserved": false,
+    "assessment": "Local visual review, not independent certification"
+  }
+}

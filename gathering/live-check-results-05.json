@@ -1,0 +1,140 @@
+[
+  {
+    "trial": "ZTO hash-pinned capture/replay",
+    "exitCode": 0,
+    "stdout": "{\n  \"block_hash\": \"0x2a0887e5abda9b7b1b5517e07d69a4e0dc5bc484c15fd67be3de9ba63dde6413\",\n  \"block_number\": 26192484,\n  \"chain_id\": 1,\n  \"decimals\": 18,\n  \"evidence\": \"RPC provider observations, not a state proof\",\n  \"state_selector\": {\n    \"blockHash\": \"0x2a0887e5abda9b7b1b5517e07d69a4e0dc5bc484c15fd67be3de9ba63dde6413\",\n    \"requireCanonical\": true\n  },\n  \"total_supply_raw\": \"1000000000000000000000000000\",\n  \"total_supply_tokens\": \"1000000000.000000000000000000\",\n  \"zto_address\": \"0xd782bdea4ef02a0bd391eb9089470c8080f0a68e\"\n}\n",
+    "stderr": "",
+    "source": "https://ethereum-rpc.publicnode.com"
+  },
+  {
+    "trial": "fresh two-provider ZTO payment",
+    "exitCode": 0,
+    "result": {
+      "accepted": true,
+      "state": "corroborated",
+      "policy": {
+        "tx": "0xc4ca304c305cae326cab066639ab2156412eee7f5f774b41a2a136369f817ef7",
+        "recipient": "0x2d30e495a15f2657d57c3e2caa08b06415c26cbf",
+        "minimum_raw": "166357571280020680094504",
+        "token": "ZTO",
+        "confirmations": 12,
+        "finalized": true
+      },
+      "providers": [
+        {
+          "source": "https://ethereum-rpc.publicnode.com",
+          "report": {
+            "chainId": 1,
+            "transactionHash": "0xc4ca304c305cae326cab066639ab2156412eee7f5f774b41a2a136369f817ef7",
+            "head": {
+              "number": 26192584,
+              "hash": "0xdea37a1b487bc8fecb62ac7567ef600745018b67e4f666d854aa929af17fa0c3"
+            },
+            "policy": {
+              "minimumConfirmations": 12,
+              "requireFinalized": true
+            },
+            "settled": true,
+            "inclusion": {
+              "number": 26190898,
+              "hash": "0x92fd5a2a4e348630cc5e93252669b754760ae4e818a976dd00db145e30ddc8dd"
+            },
+            "execution": "succeeded",
+            "finalizedHead": {
+              "number": 26192516,
+              "hash": "0xf85ae9798f6ac8f3d27f9d3f1c1fd8a5c8475cc1d22164291897f114d466d513"
+            },
+            "confirmations": 1687,
+            "finalized": true,
+            "state": "settled",
+            "reason": "Execution and canonical-chain evidence meet the selected policy.",
+            "accepted": true,
+            "paymentPolicy": {
+              "token": "ZTO",
+              "contract": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+              "recipient": "0x2d30e495a15f2657d57c3e2caa08b06415c26cbf",
+              "minimumRaw": "166357571280020680094504",
+              "measure": "incoming minus outgoing Transfer amounts in this receipt"
+            },
+            "transferEvidence": {
+              "incomingRaw": "166357571280020680094504",
+              "outgoingRaw": "0",
+              "netRaw": "166357571280020680094504",
+              "events": [
+                {
+                  "from": "0x000000000004444c5dc75cb358380d2e3de08a90",
+                  "to": "0x2d30e495a15f2657d57c3e2caa08b06415c26cbf",
+                  "raw": "166357571280020680094504",
+                  "logIndex": 632
+                }
+              ]
+            },
+            "paymentState": "verified"
+          }
+        },
+        {
+          "source": "https://eth.drpc.org",
+          "report": {
+            "chainId": 1,
+            "transactionHash": "0xc4ca304c305cae326cab066639ab2156412eee7f5f774b41a2a136369f817ef7",
+            "head": {
+              "number": 26192584,
+              "hash": "0xdea37a1b487bc8fecb62ac7567ef600745018b67e4f666d854aa929af17fa0c3"
+            },
+            "policy": {
+              "minimumConfirmations": 12,
+              "requireFinalized": true
+            },
+            "settled": true,
+            "inclusion": {
+              "number": 26190898,
+              "hash": "0x92fd5a2a4e348630cc5e93252669b754760ae4e818a976dd00db145e30ddc8dd"
+            },
+            "execution": "succeeded",
+            "finalizedHead": {
+              "number": 26192516,
+              "hash": "0xf85ae9798f6ac8f3d27f9d3f1c1fd8a5c8475cc1d22164291897f114d466d513"
+            },
+            "confirmations": 1687,
+            "finalized": true,
+            "state": "settled",
+            "reason": "Execution and canonical-chain evidence meet the selected policy.",
+            "accepted": true,
+            "paymentPolicy": {
+              "token": "ZTO",
+              "contract": "0xd782bdea4ef02a0bd391eb9089470c8080f0a68e",
+              "recipient": "0x2d30e495a15f2657d57c3e2caa08b06415c26cbf",
+              "minimumRaw": "166357571280020680094504",
+              "measure": "incoming minus outgoing Transfer amounts in this receipt"
+            },
+            "transferEvidence": {
+              "incomingRaw": "166357571280020680094504",
+              "outgoingRaw": "0",
+              "netRaw": "166357571280020680094504",
+              "events": [
+                {
+                  "from": "0x000000000004444c5dc75cb358380d2e3de08a90",
+                  "to": "0x2d30e495a15f2657d57c3e2caa08b06415c26cbf",
+                  "raw": "166357571280020680094504",
+                  "logIndex": 632
+                }
+              ]
+            },
+            "paymentState": "verified"
+          }
+        }
+      ],
+      "evidenceLimit": "Agreement is provider evidence, not consensus or a receipt proof.",
+      "differences": [],
+      "reason": "Both observations meet policy and agree on inclusion, execution and selected-token events.",
+      "evidenceMode": "live sequential observations from two public URLs"
+    }
+  },
+  {
+    "trial": "bounded ZTO discovery",
+    "exitCode": 0,
+    "stdout": "{\n  \"state\": \"candidate\",\n  \"transactionHash\": \"0x4691317c276ea4afbf1c63b5f20d48916431b260acd2894903e79e8f3f54af33\",\n  \"settled\": false,\n  \"note\": \"Discovery is not settlement; check this hash with settlement-check.\",\n  \"reads\": [\n    {\n      \"method\": \"eth_chainId\",\n      \"status\": \"returned\"\n    },\n    {\n      \"method\": \"eth_getBlockByNumber\",\n      \"status\": \"returned\"\n    },\n    {\n      \"method\": \"eth_getLogs\",\n      \"range\": {\n        \"fromBlock\": \"0x18fa8ca\",\n        \"toBlock\": \"0x18faac9\"\n      },\n      \"status\": \"returned\"\n    }\n  ]\n}\n",
+    "stderr": "",
+    "source": "https://ethereum-rpc.publicnode.com"
+  }
+]

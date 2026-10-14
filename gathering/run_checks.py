@@ -51,6 +51,21 @@ def main():
         ['-m', 'unittest', 'discover', '-s', 'line-4/tools/domain-check', '-v'],
         ['shared/payment-evidence/test_bind.py'],
         ['shared/payment-evidence/bind.py', 'shared/payment-evidence/example.transcript.json', 'shared/payment-evidence/example.policy.json', 'shared/payment-evidence/example.typed-data.json', '--chain-id', '1', '--name', 'Read-only Payment Evidence', '--version', '1', '--primary-type', 'PaymentEvidence', '--no-verifier', '--summary']]
+    commands.extend([
+        ['line-1/tools/hash-pinned-zto/pinned.py', '--verify', 'line-1/tools/hash-pinned-zto/live-zto.json'],
+        ['line-1/tools/hash-pinned-zto/test_pinned.py'],
+        ['line-2/tools/repair-review/review.py', 'line-2/tools/repair-review/handoff.contract.json', 'line-2/tools/repair-review/before.example.json', 'line-2/tools/repair-review/after.example.json'],
+        ['line-2/tools/repair-review/test_review.py'],
+        ['line-2/tools/bounded-contract/check.py', 'line-2/tools/ordered-deliverables/record.strict.contract.json', 'dist/line-2/25.json'],
+        ['line-3/tools/provider-agreement/agreement.py', '--demo'],
+        ['-m', 'unittest', 'discover', '-s', 'line-3/tools/provider-agreement', '-p', 'test_*.py', '-v'],
+        ['line-4/tools/request-compare/request_compare.py', 'line-4/tools/request-compare/zto-intended.json', 'line-4/tools/request-compare/zto-intended.json', '--summary'],
+        ['-m', 'unittest', 'discover', '-s', 'line-4/tools/request-compare', '-v'],
+    ])
+    commands.extend([
+        ['shared/payment-evidence/test_corroborate.py'],
+        ['shared/payment-evidence/corroborate.py', 'shared/payment-evidence/example.paired.json', 'shared/payment-evidence/example.paired-policy.json', 'shared/payment-evidence/example.paired-intended.json', 'shared/payment-evidence/example.paired-intended.json', '--summary'],
+    ])
     results = []
     for args in commands:
         command = [sys.executable, '-B', *args]

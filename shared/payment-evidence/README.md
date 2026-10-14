@@ -211,3 +211,98 @@ re-derived from current mark 24 sources. A detached scratch copy works offline
 without any line folders. `round04.*.json` retains fresh ZTO observations and the
 combined check; its policy and client request are explicitly derived from the
 observed receipt for demonstration, not an independently issued invoice.
+
+## Corroborated payment and complete request (Gathering 05)
+
+`corroborate.py` joins Line 3's two-provider agreement and Line 4's complete
+intended-request comparison to this bridge. It is useful when a worker needs
+one offline acceptance decision over payment evidence and the exact request
+that describes it. **Every gate is mandatory:** both observations meet the
+independent policy, policy-relevant provider facts agree, the evidence-derived
+request matches the reviewed intended request, and the client matches that
+complete intended encoding. Saved success flags never bypass recomputation.
+
+One command from the repository root demonstrates historical real ZTO evidence:
+
+```sh
+python3 -B shared/payment-evidence/corroborate.py shared/payment-evidence/example.paired.json shared/payment-evidence/example.paired-policy.json shared/payment-evidence/example.paired-intended.json shared/payment-evidence/example.paired-intended.json --summary
+```
+
+Tried: exit **0**, `accepted: true`, both comparisons report zero differences.
+The example commitment is
+`0x62ff5d3efeeb1fbd5e9749792bac95e13e75cbaeb97523ad666b03129cb4b521`.
+`example.paired.json` is an unchanged copy of Line 3's actual saved Publicnode
+and dRPC observations of the historical ZTO payment. Its policy was derived from
+an observed receipt and its intended request is generated for demonstration;
+self-comparison is not independent approval or an invoice. Source/copy hashes
+for the new code are recorded in `provenance.json`.
+
+For actual use, supply **your independently chosen policy** and **your complete
+reviewed intended request**, then the exact client request as the fourth path.
+A changed amount can reject the client while provider evidence passes; matching
+intended/client bytes cannot accept an intended request that disagrees with the
+evidence, and matching requests cannot accept a payment shortfall. Remove
+`--summary` to see every differing encoding node and the derived request.
+Source labels and both transcript content hashes are separately bound in a fixed
+`CorroboratedPaymentEvidence` request with domain name
+`Read-only Corroborated Payment Evidence`, version `1`, chain ID `1`, and no
+verifying contract. All policy fields are also visible in its message. This is a
+read-only content commitment, never a permit or a request to sign.
+
+For preparing a request for separate review, the pure API
+`request_for_pair(paired, policy)` returns the recomputed agreement report and
+the derived typed-data document; it does not treat this derivation as approval.
+The standalone vendored `request_compare.compare(intended, client)` can compare
+other complete EIP-712 domains and types without a payment or bridge domain.
+Do not infer what should be intended from an untrusted client request.
+
+Inputs use this bridge's strict 65,536-byte, depth/node-bounded no-follow JSON
+reader. Each provider transcript additionally passes Line 2's exact contract
+and Line 3's replay checks. Providers must be exactly Publicnode then dRPC;
+no missing-source fallback is possible. ZTO is used first; an independently
+supplied policy may select real IMD instead. Output is limited to 100,000 bytes;
+summary mode still computes and bounds the full diagnostic comparison. The
+Line 4 trace/comparison caps also apply. POSIX file primitives are required.
+Exit **0** means all gates pass; **1** means a valid policy/encoding rejection;
+**2** means malformed/unsafe input or inconsistent evidence.
+
+The full `shared/payment-evidence/` folder is portable: copy it into a fresh
+workspace and run the same command with paths relative to that copy. No line
+folders, cave records, package installation, account, key, configuration,
+network, environment access, signing or sending is needed. The new vendored
+agreement is used only through replay; its live constructor remains disabled
+with this bridge's settlement transport. Existing public capture uses the
+bounded bridge transport. The witness copy now includes Line 3's stronger
+no-follow workspace replay reader.
+
+All **16 integration tests** passed, including on a detached copy:
+
+```sh
+python3 -B shared/payment-evidence/test_corroborate.py
+```
+
+Tests exercise shortfall despite matching requests, changed client/intended
+amounts, intended domain mismatch, schema/source/transcript changes, different
+events despite equal net totals, complete content binding, policy lowering,
+malformed/reordered/extra transcripts, equivalent integer/address spellings,
+immutability, full/summary parity, output limits, no transport construction and
+CLI exit codes. Manipulated data is explicitly test-only rejection scaffolding.
+Actual observations from two sources can be byte-identical; such identity is
+accepted and does not establish distinct upstream operators.
+
+`round05.paired.json`, `round05.policy.json`, `round05.intended.json` and
+`round05.corroboration.json` retain fresh public observations and a derived demo:
+head 26192584, inclusion 26190898, 1687 confirmations, finalized and net
+166357571280020680094504 raw ZTO received by the historical observed recipient.
+Both URLs agreed; combined demo commitment is
+`0x6655275b09cf4920fff5c2d6194e24cc946ee9d6e8017c5084b90c06b4230c41`.
+
+Agreement is **provider evidence**, not authenticated consensus/receipt proof.
+Source labels in saved files can be forged, providers can share infrastructure,
+and consistent false observations can pass. Replay cannot prove current
+canonicality or freshness. The encoder/trace share an implementation, so their
+agreement is not independent cryptographic verification. Intended-request
+provenance, recipient ownership, invoice validity, deduplication and signing
+authorization remain the caller's responsibility. Complete file content binding
+is intentionally stricter than payment-fact agreement: changed harmless metadata
+requires reviewing a new intended commitment.

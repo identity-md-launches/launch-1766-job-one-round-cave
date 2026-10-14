@@ -23,8 +23,8 @@
   {
     "source": "line-3/tools/payment-witness/witness.py",
     "copy": "vendor/payment-witness/witness.py",
-    "sha256": "5bd6ab995e8f565404f4a1cfdb543ca7138d0df7febde8f906f3ad8a233261c5",
-    "copiedSha256": "5bd6ab995e8f565404f4a1cfdb543ca7138d0df7febde8f906f3ad8a233261c5",
+    "sha256": "ea4fac4966c2be40d98137c2dcbe2a24ea0c2ad80125e0139d8de2415a170f16",
+    "copiedSha256": "ea4fac4966c2be40d98137c2dcbe2a24ea0c2ad80125e0139d8de2415a170f16",
     "adaptation": "none; byte-for-byte source copy"
   },
   {
@@ -46,6 +46,20 @@
     "copy": "vendor/domain_check.py",
     "sha256": "5ef34624c0834a0ee87edb58ab1908ebc35bce4c6062c6dcab820d5b824c5a8c",
     "copiedSha256": "5ef34624c0834a0ee87edb58ab1908ebc35bce4c6062c6dcab820d5b824c5a8c",
+    "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-3/tools/provider-agreement/agreement.py",
+    "copy": "vendor/provider-agreement/agreement.py",
+    "sha256": "d502997c0e5dbed7c43b74bced39d83a17a1ba9d7c58366c61620788744dd8a6",
+    "copiedSha256": "d502997c0e5dbed7c43b74bced39d83a17a1ba9d7c58366c61620788744dd8a6",
+    "adaptation": "none; byte-for-byte source copy"
+  },
+  {
+    "source": "line-4/tools/request-compare/request_compare.py",
+    "copy": "vendor/request_compare.py",
+    "sha256": "c9bae636437c25a66d8eb459cd3450d3a6ac5c12b458b97f06613bb594c8c71e",
+    "copiedSha256": "c9bae636437c25a66d8eb459cd3450d3a6ac5c12b458b97f06613bb594c8c71e",
     "adaptation": "none; byte-for-byte source copy"
   }
 ]
