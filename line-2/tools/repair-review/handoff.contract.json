@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": ["task", "checks"],
+  "additionalProperties": false,
+  "properties": {
+    "task": {"type": "string", "minLength": 1},
+    "checks": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object", "required": ["name", "passed"],
+        "additionalProperties": false,
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "passed": {"type": "boolean"}
+        }
+      }
+    }
+  }
+}

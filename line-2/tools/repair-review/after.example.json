@@ -1,0 +1,1 @@
+{"task": "Check a worker handoff", "checks": [{"name": "offline validation", "passed": true}]}

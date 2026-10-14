@@ -1,0 +1,74 @@
+{
+  "wall": {
+    "paths": [
+      "artifacts/line-2/wall.png",
+      "artifacts/line-2/wall-v5.png"
+    ],
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "format": "RGB PNG",
+    "sha256": "421c094aae160d13cb91cb49f7d56c261c751a7fc81df1b35a675f49cb8284a8",
+    "bytes": 3935982
+  },
+  "preview": {
+    "path": "dist/line-2/25.jpg",
+    "dimensions": [
+      512,
+      512
+    ],
+    "format": "baseline JFIF JPEG",
+    "bytes": 68184
+  },
+  "preservation": {
+    "ancestor_sha256": "877a58310c87ae1ee366efcd9a28008ed2eb2c9caa1d19347c96cae990c8eff6",
+    "changed_pixels": 6307,
+    "unchanged_pixels": 1566209,
+    "addition_region": [
+      300,
+      830,
+      230,
+      150
+    ],
+    "changed_bounds": [
+      303,
+      834,
+      526,
+      975
+    ],
+    "outside_region_identical": true,
+    "dark_cracks_protected": true
+  },
+  "visual_review": {
+    "status": "full PNG and decoded JPEG inspected locally",
+    "pepe": "ancestor wide mouths and heavy-lidded eyes preserved",
+    "visible_hands_or_handprints": 0,
+    "digits": "none depicted; no new hands or handprints",
+    "rock_cracks_colour_light_framing": "preserved",
+    "forbidden_elements_observed": false,
+    "unmet_requirements": []
+  },
+  "checks": {
+    "new_tests": 12,
+    "inherited_tests": 37,
+    "passed": 49,
+    "demonstration": {
+      "exit": 0,
+      "resolved": 2,
+      "persistent": 0,
+      "introduced": 0
+    },
+    "real_records_24_25": {
+      "exit": 0,
+      "before_valid": true,
+      "after_valid": true
+    },
+    "png_crcs_and_decompression": "passed",
+    "independent_ancestor_pixel_comparison": "passed",
+    "record_shape_and_hash": "passed",
+    "goal_and_older_records_unchanged": "passed",
+    "new_nonartifact_files_under_100KB": "passed",
+    "outputs_untracked": "artifacts paths are ignored/untracked; not added to Git"
+  }
+}

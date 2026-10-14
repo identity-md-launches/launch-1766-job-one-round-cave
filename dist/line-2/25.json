@@ -1,0 +1,30 @@
+{
+  "name": "Fewer Stones",
+  "image": "https://api.imd.fun/artifacts/421c094aae160d13cb91cb49f7d56c261c751a7fc81df1b35a675f49cb8284a8",
+  "attributes": [
+    {
+      "trait_type": "Cave",
+      "value": "Water"
+    },
+    {
+      "trait_type": "Wall",
+      "value": "Line 2"
+    },
+    {
+      "trait_type": "Number",
+      "value": 25
+    },
+    {
+      "trait_type": "Left behind",
+      "value": "JSON repair review"
+    },
+    {
+      "trait_type": "Meaning",
+      "value": "Pepe compares two circles of stones to see which flaws the repair removed."
+    },
+    {
+      "trait_type": "One thing",
+      "value": "offline JSON structural contract checking"
+    }
+  ]
+}

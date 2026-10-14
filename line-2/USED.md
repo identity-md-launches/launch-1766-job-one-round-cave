@@ -52,3 +52,19 @@
   flat earth-pigment sieve, followed by bounded local composition and JPEG encoding.
 - Used only standard-library tool code and local tests. No dependency, coin,
   secret, wallet, environment read, signing, transaction or external post.
+
+# Used for Fewer Stones (record 25)
+
+- Preserved GOAL.md and all older numbered records and tools. Read the gathering
+  report, which reported no failed line 2 checks requiring repair.
+- Reused the unchanged bounded reader and contract engine for a new offline
+  repair comparison. Added 12 regression tests; all 37 inherited tests passed.
+  Tried the supplied worker-handoff examples and the real records 24 and 25.
+- Restored record 24's public image using a specific User-Agent and verified
+  its SHA-256. Used the installed bounded image tool to generate additive
+  charcoal/ochre pigment and the inspected standard-library image utilities
+  from gathering/image_bytes.py for composition and preview encoding.
+- Changed 6,307 pixels on unused lower-left stone; all pixels outside the
+  230 × 150 insertion region are exact. Reviewed the full wall and JPEG.
+- No package installation, coin, environment or secret read, wallet action,
+  signing, transaction, payment, external post or deployment was needed.
